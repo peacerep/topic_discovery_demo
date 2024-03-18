@@ -1,0 +1,84 @@
+
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>Implementation Narratives Diffusion</title>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="viewport" content="minimal-ui"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="viewport" content="initial-scale=1.0,width=device-width,user-scalable=0"/>
+<meta name="description" content="Agreements-constitutions semantic mapping demonstrator"/>
+<link rel="icon" href="/icons/favicon.ico" sizes="32x32">    
+<link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png"/>
+<link rel="icon" type="image/png" href="/icons/favicon-32x32.png" sizes="32x32"/>
+<link rel="icon" type="image/png" href="/icons/favicon-16x16.png" sizes="16x16"/>
+<link rel="manifest" href="/site.webmanifest"/>
+<meta name="theme-color" content="#ffffff"/>
+<meta name="msapplication-config" content="none"/>
+<meta name="theme-color" content="#ffffff"/>
+<link rel="stylesheet" type="text/css" href="./css/project.css" />
+</head>
+
+<body>
+
+	<div style="padding-top: 0px;">
+		<div id="header_div" class="header">
+			<table style="table-layout:fixed;width:100%;">
+				<tr>
+					<td class="header_item"><a href="./index.html">Introduction</a></td>
+					<td class="header_item"><a href="./mapping.html">Mapping</a></td>
+					<td class="header_item"><a href="./summary_2112.html">Summarisation</a></td>
+					<td class="header_item_selected"><a href="./diffusion.html">Diffusion</a></td>
+					<td class="header_item"><img src="./logos/PeaceRep-Logo.png" alt="PeaceRep logo" height=8%></img></td>
+				</tr>
+			</table>
+		</div>
+	</div>
+
+
+	<div style="padding-left: 64px;padding-top: 32px;">
+
+		<div>
+			<h2>Diffusion</h2>
+		</div>
+		<div>
+			<p>
+				Diffusion tracks summarisation topics across a time series of reports. The diagrams below are representations of a Boolean valued topic-report matrix
+				for the agreement <em>Revitalised Agreement on the Resolution of the Conflict in the Republic of South Sudan (R-ARCSS)</em>.
+				Summarisation topics are arranged in order of first appearance in the report sequence. The matrix provides information about:
+				<ul>
+					<li>Which summarisation topics are mentioned most (row marginals).</li>
+					<li>Which reports mention the most summarisation topics (column marginals).</li>
+					<li>When a summarisation topic first appears in the report sequence.</li>
+					<li>Clustering of summarisation topics.</li>
+				</ul>
+			</p>
+			<p>
+				The y-axis contains the <a href="./summary_2112.html" target="_blank">162 summarisation topics</a>, and the x-axis the 68 implementation reports that follow the agreement.
+				Reports are in date order. In the first diagram the cell values are:
+				<ul>
+					<li>0 coded as black. The report in the column does not contain the summarisation topic in the row. </li>
+					<li>1 coded as yellow. The report in the column does contain the summarisation topic in the row. </li>
+				</ul>
+				In the second diagram a dot represents a report containing a summarisation topics. 
+			</p>
+			<p>
+				The report at report index 7 is the <em>JMEC-1st-Qtr-2020-Report-FINAL 1</em> which contains 81 of the possible 162 topics. 
+			</p>
+		</div>
+		<div>
+			<div id="diffusion_heatmap">
+				<img src="./images/diffusion_heatmap.png" class="timelineplot">
+			</div>
+			<div id="diffusion_timeline_lines">
+				<img src="./images/diffusion_timeline_lines.png" class="timelineplot">
+			</div>
+		</div>
+	</div>
+	
+	
+</body>
+
+</html>

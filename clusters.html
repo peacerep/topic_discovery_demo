@@ -1,0 +1,115 @@
+
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>Agreement-Constitution Mapping - Clusters and summarisation</title>
+<link rel="stylesheet" type="text/css" href="./css/project.css" />
+</head>
+
+<body>
+
+	<div style="padding-top: 0px;">
+		<div id="header_div" class="header">
+			<table style="table-layout:fixed;width:100%;">
+				<tr>
+					<td class="header_item"><a href="./index.html">Introduction</a></td>
+					<td class="header_item"><a href="./mapping.html">Mapping</a></td>
+					<td class="header_item"><a href="./sections.html">Sections List</a></td>
+					<td class="header_item"><a href="./timelines.html">Timelines</a></td>
+					<td class="header_item_selected"><a href="./clusters.html">Clusters</a></td>
+					<td class="header_item"><a href="./stages.html">Agreement Stage</a></td>
+					<td class="header_item"><a href="./processes.html">Peace Process</a></td>
+					<td class="header_item"><img src="./logos/PeaceRep-Logo.png" alt="PeaceRep logo" height=50></img></td>
+				</tr>
+			</table>
+		</div>
+	</div>
+
+
+
+	<div style="padding-left: 64px;padding-top: 32px;">
+
+		<div>
+			<h2>Clustering, Topics, and Diffusion: Sudan</h2>
+		</div>
+		<div>
+			<p>
+				This analysis is based on agreements falling between the Sudan constitutions of 2005 and 2019. The methods described here are those used to generate the mapping between agreement provisions
+				and constitutions sections described on the <a href="./mapping.html">Mapping</a> page.
+			</p>
+		</div>
+		<div style="padding-top: 64px;">
+			<div>
+				<h3>Network Diagram</h3>
+			</div>
+			<div>
+				<p>
+				The plot below shows a network built from provision-section pairs. Provisions are in pink and are labelled with the agreement ID and provision number.
+				Sections are in blue and are labelled with the section number only.
+				</p>
+				<p>
+					The network comprises a set of disjoint subgraphs or clusters. Altogether there are 65 clusters. 
+					Because some provisions map onto more than one section, and sections may be mapped by more than one provision, larger clusters may form as the provision-section pairs join together.
+					There are 20 of these larger clusters, the remaining 45 clusters are simple provision-section pairs.
+				</p>
+				<p>
+					A degree centrality algorithm is applied to all 65 clusters in order to provide summarisation of the content of clusters in order to create a topic.
+					A topic comprises the most salient provision and section of a cluster measured in terms of the number of connections to sections and provisions respectively.
+				</p>
+			</div>
+			<div id="network">
+				<img src="./images/network.png" class="graphplot">
+			</div>
+		</div>
+
+		<div style="padding-top: 64px;">
+			<div>
+				<h3>Diffusion</h3>
+			</div>
+			<p>
+				Diffusion tracks summarisation topics across a time series of agreements. The plot below is a representation of a binary-valued topic-agreement matrix
+				for a time series of agreements preceding the Sudan constitution of 2019.
+				Summarisation topics are arranged in order of first appearance in the agreement sequence. The plot provides information about:
+				<ul>
+					<li>Which summarisation topics are mentioned most (row marginals).</li>
+					<li>Which agreements mention the most summarisation topics (column marginals).</li>
+					<li>When a summarisation topic first appears in the agreement sequence.</li>
+					<li>Clustering of summarisation topics.</li>
+				</ul>
+			</p>
+			<p>
+				A dot represents a agreement containing a summarisation topic. Agreement 350 is the first in the series and is the <em>Darfur Peace Agreement</em> of 05/05/2006. 
+				The number of summarisation topics may be explained in part by the influence of the preceding Sudan constitution of 2005. The influence of a previous constitution can 
+				be accounted for when determining the influence of an agreement on a future constitution.
+			</p>
+		</div>
+		<div>
+			<div id="diffusion_timeline_lines">
+				<img src="./images/diffusion_timelines.png" class="timelineplot">
+			</div>
+		</div>
+
+		<div style="padding-top: 64px;">
+			<div>
+				<h3>Topic listing</h3>
+			</div>
+			<div>
+					<p>
+					Below are the 65 summarisation topics. 
+					Summarisation topics are listed in order of first appearance in the agreement time series. Note that the provision component of a summarisation topic
+					is not necessarily taken from the agreement in which the topic first appears.
+				</p>
+			</div>
+			<div id="summarisation">
+				<iframe src="./cluster_list.html" width="100%" height="100%" seamless></iframe>
+			</div>
+		</div>
+
+	</div>
+	
+	
+</body>
+
+
+</html>
